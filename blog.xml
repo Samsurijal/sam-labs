@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<html xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<head>
+<link crossorigin='anonymous' href='//use.fontawesome.com/releases/v5.6.3/css/all.css' rel='stylesheet'/>
+<script crossorigin='anonymous' integrity='sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'/>
+<style>body,html{height:100%;padding:0;margin:0;overflow:hidden}@-webkit-keyframes btnanime{0%{opacity:0;width:0}25%{opacity:.2}50%{opacity:0;width:95%}to{opacity:0;width:0}}button{font-size:1em;border-radius:0;border:0;font-family:tahoma,sans-serif;height:100%;width:100%;padding:0;margin:0;cursor:pointer}#icondownload{display:none;}#downloadButton{color:#fff;margin:auto;text-shadow:1px 1px 2px rgba(0,0,0,.5);background:#000;position:relative}#downloadButton:after{content:&quot;&quot;;opacity:0;position:absolute;top:0;right:0;bottom:0;left:0;background:#fff;border-radius:3px;-webkit-animation:btnanime 4s ease-out infinite;animation:btnanime 4s ease-out infinite;-webkit-animation-delay:2s;animation-delay:2s}#downloadButton.st1{background:#00a710;background:linear-gradient(90deg,#00a710 0,#0097ff 100%)}#downloadButton.st2{background:#f70;background:linear-gradient(90deg,#f70 0,#ff0079 100%)}#downloadButton.st3{background:#0095d6;background:linear-gradient(90deg,#0095d6 0,#5d1fb4 100%)}.buttonTitle{font-size:.45em;margin-top:4px}#container{height:100%;text-align:center;margin:auto;padding:0}#downloadButton:hover{filter:brightness(95%);-webkit-transition-duration:.2s;-webkit-transition-delay:.15s;transition-duration:.2s;transition-delay:.15s}.disableButton{pointer-events:none}@media(max-height:150px) and (max-width:400px){body{font-size:18px}@media(max-height:50px) and (max-width:200px){body{font-size:14px}}}</style>
+<script src='//calumnylightlyspider.com/18/ba/45/18ba457c38bb26abd3b3b35647f76a16.js' type='text/javascript'/>
+<script>function toShow(){var e=document.getElementById(&quot;downloader&quot;),n=document.getElementById(&quot;button&quot;);e.style.display=&quot;block&quot;,n.style.display=&quot;none&quot;}</script>
+    <b:if cond='data:blog.isMobile'>
+        <b:else>
+        </b:else>
+    </b:if>
+    <b:include data='blog' name='all-head-content'>
+        <title>
+            <data:blog.pageTitle/>
+        </title>
+        <b:skin><![CDATA[html, body { height: 100%; overflow: auto;}.purex-button-download{ width: 300px; padding: 0; line-height: 40px; font-size: 16px; } .purex-button-download-ready { background: #57b792; } .purex-button-download { text-shadow: 0 1px 4px rgba(0,0,0,.1); background: #de5733; color: #fff; position: relative; transition: .6s; overflow: hidden; } .purex-button { display: inline-block; font-family: inherit; font-size: 100%; padding: .7em 1em; border: 1px solid #999; border: none transparent; text-decoration: none; border-radius: 2px; zoom: 1; line-height: normal; white-space: nowrap; vertical-align: middle; text-align: center; cursor: pointer; -webkit-user-drag: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; box-sizing: border-box; }>]]></b:skin>
+    </b:include>
+</head>
+<body>
+    <b:section class='main' id='main' showaddelement='yes'/>
+	<div id='container'/>
+<script type='text/javascript'>
+	//<![CDATA[
+		function getVar() {
+        var n = {};
+        window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (r, i, o) {
+          n[i] = o;
+        });
+        return n;
+      }
+      var v = getVar()["v"];
+      var target = getVar()["t"];
+
+      switch (target) {
+        case 's1':
+          downloader = '<a id="button" onclick="toShow();" rel="nofollow noreferrer"><button id="downloadButton" style="background-color:#0087cf;"><div id="progress"><i class="fa fa-download" aria-hidden="true" style="display: inline;"></i> <span>Download MP3</span></div></button></a><iframe id="downloader" sandbox="allow-scripts allow-same-origin allow-downloads" src="https://cdn.statically.io/gh/ladongidev/yt-btn/59f3019a/index.html?v='+v+'&t=ytapi" FRAMEBORDER="0" MARGINWIDTH="0" MARGINHEIGHT="0" SCROLLING="no" width="100%" max-height="40px" style="display:none"></iframe>';
+          break;
+        case 's2':
+          downloader = '<iframe id="downloader" src="https://cdn.statically.io/gh/Samsurijal/sam-labs/main/abrakanabra.html?v='+v+'&t=recordmp3" FRAMEBORDER="0" MARGINWIDTH="0" MARGINHEIGHT="0" SCROLLING="no" width="100%" max-height="40px"></iframe>';
+          break;
+      }
+
+      var container = document.getElementById("container");
+
+      if (v) {
+        container.innerHTML = downloader;
+      }else{
+        container.innerHTML = 'Hello World!';
+      }
+	//]]>
+	</script>
+</body>
+</html>
